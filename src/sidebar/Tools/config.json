@@ -1,0 +1,18 @@
+{
+    "ToolComponents": [
+        {
+            "id": 1,
+            "name": "量測工具",
+            "componentname": "Measure",
+            "description": "",
+            "config": ""
+        },
+        {
+            "id": 2,
+            "name": "定位工具",
+            "componentname": "Coordinates",
+            "description": "",
+            "config": ""
+        }
+    ]
+}

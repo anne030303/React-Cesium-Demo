@@ -1,0 +1,39 @@
+{
+    "LayerComponents": [
+        {
+            "id": 1,
+            "name": "台灣",
+            "componentname": "",
+            "description": "",
+            "config": ""
+        },
+        {
+            "id": 2,
+            "name": "縣市界",
+            "componentname": "",
+            "description": "",
+            "config": ""
+        },
+        {
+            "id": 3,
+            "name": "鄉鎮市界",
+            "componentname": "",
+            "description": "",
+            "config": ""
+        },
+        {
+            "id": 4,
+            "name": "5000圖框",
+            "componentname": "",
+            "description": "",
+            "config": ""
+        },
+        {
+            "id": 5,
+            "name": "1000圖框",
+            "componentname": "",
+            "description": "",
+            "config": ""
+        }
+    ]
+}

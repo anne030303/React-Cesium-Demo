@@ -1,0 +1,115 @@
+{
+    "ThemesTitle": [
+        {
+            "id": 1,
+            "name": "電信信令人口統計資料",
+            "componentname": "TelecomSignalingDemographicData",
+            "description": "",
+            "config": ""
+        },
+        {
+            "id": 2,
+            "name": "建物白模",
+            "componentname": "Building",
+            "description": "",
+            "config": ""
+        },
+        {
+            "id": 3,
+            "name": "校園精緻模型",
+            "componentname": "school",
+            "description": "",
+            "config": ""
+        },
+        {
+            "id": 4,
+            "name": "太陽花事件立法院模型",
+            "componentname": "SunFlower",
+            "description": "",
+            "config": ""
+        }
+    ],
+    "model": {
+        "sun": [
+            {
+                "id": 0,
+                "url": "./3Dtile/sun/tileset.json",
+                "layername": "Sunflower Movement",
+                "modelname": "立法院"
+            }
+        ],
+        "school": [
+            {
+                "id": 1,
+                "url": "./3Dtile/school/1/Placemark/tileset.json",
+                "modelname": "風雩樓",
+                "intro_url": "https://osa.nccu.edu.tw/tw/%E8%AA%B2%E5%A4%96%E6%B4%BB%E5%8B%95%E7%B5%84/%E5%A0%B4%E5%9C%B0%E5%8F%8A%E5%99%A8%E6%9D%90/%E5%A0%B4%E5%9C%B0%E4%BB%8B%E7%B4%B9"
+            },
+            {
+                "id": 3,
+                "url": "./3Dtile/school/3/Placemark/tileset.json",
+                "modelname": "憩賢樓",
+                "description": "政大學生餐廳憩賢樓，於2021年2月28日走入歷史"
+            },
+            {
+                "id": 4,
+                "url": "./3Dtile/school/4/Placemark/tileset.json",
+                "modelname": "社會科學資料中心"
+            },
+            {
+                "id": 5,
+                "url": "./3Dtile/school/5/Placemark/tileset.json",
+                "modelname": "新聞館",
+                "intro_url": "https://comm.nccu.edu.tw/zh_tw/about/link23/journalismbuilding"
+            },
+            {
+                "id": 6,
+                "url": "./3Dtile/school/6/Placemark/tileset.json",
+                "modelname": "大仁樓"
+            },
+            {
+                "id": 7,
+                "url": "./3Dtile/school/7/Placemark/tileset.json",
+                "modelname": "大智樓"
+            },
+            {
+                "id": 8,
+                "url": "./3Dtile/school/8/Placemark/tileset.json",
+                "modelname": "研究大樓"
+            },
+            {
+                "id": 9,
+                "url": "./3Dtile/school/9/Placemark/tileset.json",
+                "modelname": "樂活館",
+                "description": "",
+                "intro_url": ""
+            },
+            {
+                "id": 10,
+                "url": "./3Dtile/school/10/Placemark/tileset.json",
+                "modelname": "果夫樓"
+            },
+            {
+                "id": 11,
+                "url": "./3Dtile/school/11/Placemark/tileset.json",
+                "modelname": "志希樓"
+            },
+            {
+                "id": 12,
+                "url": "./3Dtile/school/12/Placemark/tileset.json",
+                "modelname": "逸仙樓"
+            },
+            {
+                "id": 13,
+                "url": "./3Dtile/school/13/Placemark/tileset.json",
+                "modelname": "中正圖書館",
+                "intro_url": "https://www.lib.nccu.edu.tw/"
+            },
+            {
+                "id": 14,
+                "url": "./3Dtile/school/14/Placemark/tileset.json",
+                "modelname": "行政大樓"
+            }
+        ]
+    }
+}

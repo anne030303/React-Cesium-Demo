@@ -1,0 +1,32 @@
+{
+    "title": "3D map",
+    "controls": {
+        "geocoder": false,
+        "homeButton": false,
+        "sceneModePicker": false,
+        "baseLayerPicker": false,
+        "navigationHelpButton": false,
+        "animation": false,
+        "timeline": false,
+        "fullscreenButton": false,
+        "infoBox": false
+    },
+    "sidebarlist": [
+        {
+            "id": 1,
+            "name": "Layers"
+        },
+        {
+            "id": 2,
+            "name": "Tools"
+        },
+        {
+            "id": 3,
+            "name": "My maps"
+        },
+        {
+            "id": 4,
+            "name": "Themes"
+        }
+    ]
+}
