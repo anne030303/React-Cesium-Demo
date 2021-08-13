@@ -6,15 +6,27 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import SidebarComponents from './SidebarComponents';
+import { useSelector, useDispatch } from 'react-redux';
 
 
-
-function SidebarItemList(props) {
+function SidebarItemList() {
     const sidebarlist = mainConfig.sidebarlist;
+    const {
+        isSidebarOpen: openSidebar,
+        selectedTab: selectTab
+    } = useSelector(state => state.isSidebarOpen);
+
+    const dispatch = useDispatch();
+    const handleSidebar = (id) => {
+        dispatch({
+            type: 'HANDLE_SIDEBAR_TABNUM',
+            selectedTab: id
+        });
+    };
 
 
     const findItem = (evt) => {
-        if (evt === props.selectTab & props.openSidebar) {
+        if (evt === selectTab & openSidebar) {
             return true;
         } else {
             return false;
@@ -26,7 +38,7 @@ function SidebarItemList(props) {
             <List>
                 {sidebarlist.map((item) => (
                     <div key={item.id}>
-                        <ListItem button onClick={() => props.handleSidebar(item.id)}>
+                        <ListItem button onClick={() => handleSidebar(item.id)}>
                             <SidebarIcon icon={item.name} />
                             <ListItemText primary={item.name} />
                             {findItem(item.id) ? <ExpandLess /> : <ExpandMore />}

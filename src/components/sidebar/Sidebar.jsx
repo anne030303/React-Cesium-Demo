@@ -9,6 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { makeStyles } from '@material-ui/core/styles';
+import { useSelector, useDispatch } from 'react-redux';
 
 const drawerWidth = 240;
 const sidebarStyle = makeStyles((theme) => ({
@@ -32,36 +33,41 @@ const sidebarStyle = makeStyles((theme) => ({
     },
 }), { name: 'MuiDrawer' });
 
-function Sidebar(props) {
+function Sidebar() {
     const classes = myStyle();
     const drawer = sidebarStyle();
+    const { isSidebarOpen: openSidebar } = useSelector(state => state.isSidebarOpen);
+    const dispatch = useDispatch();
+    const handleSidebar = () => {
+        dispatch({
+            type: 'HANDLE_SIDEBAR_BOOLEAN',
+            isSidebarOpen: openSidebar
+        });
+    };
 
     return (
         <div id="sidebar">
             <Drawer
                 variant="permanent"
                 className={clsx(classes.drawer, {
-                    [drawer.drawerOpen]: props.openSidebar,
-                    [drawer.drawerClose]: !props.openSidebar,
+                    [drawer.drawerOpen]: openSidebar,
+                    [drawer.drawerClose]: !openSidebar,
                 })}
                 classes={{
                     paper: clsx({
-                        [drawer.drawerOpen]: props.openSidebar,
-                        [drawer.drawerClose]: !props.openSidebar,
+                        [drawer.drawerOpen]: openSidebar,
+                        [drawer.drawerClose]: !openSidebar,
                     }),
                 }}
             >
                 <div>
                     <div className={classes.toolbar}>
-                        <IconButton onClick={() => props.handleSidebar(props.openSidebar)}>
+                        <IconButton onClick={handleSidebar}>
                             <ChevronLeftIcon />
                         </IconButton>
                     </div>
                     <Divider />
-                    <SidebarItemList
-                        openSidebar={props.openSidebar}
-                        selectTab={props.selectTab}
-                        handleSidebar={props.handleSidebar} />
+                    <SidebarItemList />
                     {/* <div style={{ backgroundColor: "black", height: "100px" }} /> */}
                 </div>
             </Drawer>

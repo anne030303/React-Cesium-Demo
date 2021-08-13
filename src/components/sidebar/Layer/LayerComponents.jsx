@@ -10,8 +10,11 @@ function Layercomponents(props) {
     const LayerComponents = mainConfig.LayerComponents;
 
 
-    const handleChange = (event) => {
-        setChecked(event.target.checked);
+    const handleChange = (evt, checked, id) => {
+        setChecked(evt.target.checked);
+        if (evt) {
+            window.emitter.emit('checked', checked, id);
+        }
     };
 
     return (
@@ -20,7 +23,7 @@ function Layercomponents(props) {
                 <ListItem key={item.id} style={{ height: "40px" }}>
                     <Checkbox
                         checked={checked}
-                        onChange={handleChange}
+                        onChange={(e) => handleChange(e, checked, item.id)}
                         color="default"
                         inputProps={{ 'aria-label': 'checkbox with default color' }}
                     />

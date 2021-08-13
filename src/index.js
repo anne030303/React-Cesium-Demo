@@ -1,16 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./components/App";
 import './index.css';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer from './reducers'
 
-const { EventEmitter } = require("fbemitter");
+const store = createStore(rootReducer)
 
-window.map = null;
-window.sidebarOpen = null;
-window.emitter = new EventEmitter();
-window.popup = null;
-window.isDrawingOrEditing = false;
-window.isCoordinateToolOpen = false;
-window.isMeasuring = false;
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById("root")
+);
