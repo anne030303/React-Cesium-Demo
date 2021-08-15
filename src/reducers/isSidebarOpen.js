@@ -33,4 +33,4 @@ const isSidebarOpen = (state = initial, action) => {
     }
 }
 
-export default isSidebarOpen
+export default isSidebarOpen;

@@ -1,10 +1,10 @@
-import config from '../components/sidebar/Themes/config.json'
+import config from '../components/sidebar/Layers/config.json'
 
-const themesInitial = config.ThemesItems
+const layersInitial = config.LayerItems
 
-const checkedTheme = (state = {}, action) => {
+const checkedLayer = (state = {}, action) => {
     switch (action.type) {
-        case 'CHECKEDTHEME':
+        case 'CHECKEDLAYER':
             if (state.id !== action.id) {
                 return state
             }
@@ -19,15 +19,15 @@ const checkedTheme = (state = {}, action) => {
 }
 
 
-const checkedThemes = (state = themesInitial, action) => {
+const checkedLayers = (state = layersInitial, action) => {
     switch (action.type) {
-        case 'CHECKEDTHEME':
+        case 'CHECKEDLAYER':
             return state.map(item =>
-                checkedTheme(item, action)
+                checkedLayer(item, action)
             );
         default:
             return state
     }
 }
 
-export default checkedThemes;
+export default checkedLayers;

@@ -1,39 +1,49 @@
 {
-    "LayerComponents": [
+    "LayerItems": [
         {
             "id": 1,
             "name": "台灣",
             "componentname": "",
             "description": "",
-            "config": ""
+            "datatype": "geojson",
+            "datapath": "./geojson/taiwan.geojson",
+            "checked": false
         },
         {
             "id": 2,
             "name": "縣市界",
             "componentname": "",
             "description": "",
-            "config": ""
+            "datatype": "geojson",
+            "datapath": "./geojson/country.geojson",
+            "checked": false
         },
         {
             "id": 3,
             "name": "鄉鎮市界",
             "componentname": "",
             "description": "",
-            "config": ""
+            "datatype": "geojson",
+            "datapath": "./geojson/鄉鎮市區界線.geojson",
+            "checked": false
         },
         {
             "id": 4,
             "name": "5000圖框",
             "componentname": "",
             "description": "",
-            "config": ""
+            "datatype": "geojson",
+            "datapath": "./geojson/5000frame.geojson",
+            "checked": false
         },
         {
             "id": 5,
-            "name": "1000圖框",
+            "name": "捷運",
             "componentname": "",
             "description": "",
-            "config": ""
+            "datatype": "geojson",
+            "datapath": "./geojson/捷運.geojson",
+            "checked": false
         }
     ]
 }

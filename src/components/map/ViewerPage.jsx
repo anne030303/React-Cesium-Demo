@@ -1,46 +1,39 @@
 import React, { useState } from "react";
 import { Viewer } from "resium";
 import "./ViewerPage.css";
-import LayersConfig from "../sidebar/Layer/config.json";
-// import ViewerContext from "./ViewerContext";
+import ViewerContext from "./ViewerContext";
+import { useSelector } from 'react-redux';
+import Layers from './Layers/Layers';
+import Themes from './Themes/Themes'
 
 
 const ViewerPage = () => {
-    // let [viewer, setview] = useState(); // This will be raw Cesium's Viewer object.
-    const [checkedItems, setCheckedItems] = useState({});
-    const LayerComponents = LayersConfig.LayerComponents;
-    // window.emitter.addListener('checked', function (checked, id) {
-    //     let target = LayerComponents.filter(item => item.id === id)
-    //     setCheckedItems({
-    //         ...checkedItems,
-    //         [target[0].name]: checked
-    //     })
-    // });
+    let [viewer, setview] = useState(); // This will be raw Cesium's Viewer object.
+    const mapControls = useSelector(state => state.mapControls);
 
     return (
-        // <ViewerContext.Provider value={{ viewer }}>
-        <Viewer
-            className="cesiumView"
-            // full
-            ref={e => {
-                if (e) { window.map = e.cesiumElement }
-                // if (e) { setview(e.cesiumElement) }
-                // viewer = e && e.cesiumElement;
-            }}
-            geocoder={false}
-            homeButton={false}
-            sceneModePicker={false}
-            baseLayerPicker={false}
-            navigationHelpButton={false}
-            animation={false}
-            timeline={false}
-            fullscreenButton={false}
-            infoBox={false}
-        >
+        <ViewerContext.Provider value={{ viewer }}>
+            <Viewer
+                className="cesiumView"
+                ref={e => {
+                    if (e) { setview(e.cesiumElement) }
+                }}
+                geocoder={mapControls.geocoder}
+                homeButton={mapControls.homeButton}
+                sceneModePicker={mapControls.sceneModePicker}
+                baseLayerPicker={mapControls.baseLayerPicker}
+                navigationHelpButton={mapControls.navigationHelpButton}
+                animation={mapControls.animation}
+                timeline={mapControls.timeline}
+                fullscreenButton={mapControls.fullscreenButton}
+                infoBox={mapControls.infoBox}
+            >
+                <Layers />
+                <Themes />
+            </Viewer>
 
-        </Viewer>
 
-        // </ViewerContext.Provider>
+        </ViewerContext.Provider>
 
     );
 };

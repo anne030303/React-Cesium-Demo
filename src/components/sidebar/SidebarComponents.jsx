@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import LayerComponents from "./Layer/LayerComponents"
+import LayerComponents from "./Layers/LayerComponents"
 import ToolComponents from "./Tools/ToolComponents"
 import MymapsComponents from "./Mymaps/MymapsComponents"
 import ThemesComponents from "./Themes/ThemesComponents"

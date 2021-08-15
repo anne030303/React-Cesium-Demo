@@ -1,29 +1,28 @@
 import React from "react";
 import { List, ListItem, ListItemText } from '@material-ui/core';
-import mainConfig from "./config.json";
+import { useSelector, useDispatch } from 'react-redux';
 import Checkbox from '@material-ui/core/Checkbox';
 
 
 
 function Layercomponents(props) {
-    const [checked, setChecked] = React.useState(false);
-    const LayerComponents = mainConfig.LayerComponents;
+    const layers = (useSelector(state => state.checkedLayers));
+    const dispatch = useDispatch();
+    const handleChecked = (id) => {
+        dispatch({
+            type: 'CHECKEDLAYER',
+            id: id
+        });
 
-
-    const handleChange = (evt, checked, id) => {
-        setChecked(evt.target.checked);
-        if (evt) {
-            window.emitter.emit('checked', checked, id);
-        }
     };
 
     return (
         <List component="div" disablePadding>
-            {LayerComponents.map((item) => (
+            {layers.map((item) => (
                 <ListItem key={item.id} style={{ height: "40px" }}>
                     <Checkbox
-                        checked={checked}
-                        onChange={(e) => handleChange(e, checked, item.id)}
+                        checked={item.checked}
+                        onChange={() => handleChecked(item.id)}
                         color="default"
                         inputProps={{ 'aria-label': 'checkbox with default color' }}
                     />

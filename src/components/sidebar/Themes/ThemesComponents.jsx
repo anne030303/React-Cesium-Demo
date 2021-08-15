@@ -1,24 +1,40 @@
+import React, { useEffect, useState } from "react";
 import { List, ListItem, ListItemText } from '@material-ui/core';
-import mainConfig from "./config.json";
+import { useSelector, useDispatch } from 'react-redux';
 import Checkbox from '@material-ui/core/Checkbox';
+import BuildingSlidar from "./BuildingSlidar";
 
 
 
 function ThemesComponents(props) {
+    const themes = (useSelector(state => state.checkedThemes));
+    const dispatch = useDispatch();
+    const handleChecked = (id, checked) => {
+        dispatch({
+            type: 'CHECKEDTHEME',
+            id: id
+        });
+    };
 
-    const ThemesTitle = mainConfig.ThemesTitle;
 
     return (
         <List component="div" disablePadding>
-            {ThemesTitle.map((item) => (
-                <ListItem key={item.id} style={{ height: "40px" }}>
-                    <Checkbox
-                        color="default"
-                        inputProps={{ 'aria-label': 'checkbox with default color' }}
-                    />
-                    <ListItemText primary={item.name} />
-                </ListItem>
+            {themes.map((item) => (
+                <div key={item.id}>
+                    <ListItem style={{ height: "40px" }}>
+                        <Checkbox
+                            checked={item.checked}
+                            onChange={() => handleChecked(item.id, item.checked)}
+                            color="default"
+                            inputProps={{ 'aria-label': 'checkbox with default color' }}
+                        />
+                        <ListItemText primary={item.name} />
+
+                    </ListItem>
+                    {(item.id === 2 && item.checked === true) && < BuildingSlidar />}
+                </div>
             ))}
+
 
         </List>
     )
