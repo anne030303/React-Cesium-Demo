@@ -12,6 +12,9 @@ const myStyle = makeStyles((theme) => ({
     menuButton: {
         marginRight: 36,
     },
+    title: {
+        flexGrow: 1,
+    },
     drawer: {
         width: drawerWidth,
         flexShrink: 0,

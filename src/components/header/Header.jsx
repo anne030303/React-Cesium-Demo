@@ -10,12 +10,14 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from '@material-ui/core/styles';
 import { useSelector, useDispatch } from 'react-redux';
+import Button from '@material-ui/core/Button';
 
 
 const drawerWidth = 240;
 
 const headerStyle = makeStyles((theme) => ({
     root: {
+        flexGrow: 1,
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(['width', 'margin'], {
             easing: theme.transitions.easing.sharp,
@@ -64,9 +66,10 @@ function Header() {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap>
+                    <Typography className={classes.title} variant="h6" noWrap>
                         My Map
                     </Typography>
+                    <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
         </div>
