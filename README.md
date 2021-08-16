@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Cesium Demo with React and Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is built using React, Cesium and Resium. The goal of this app is to showcases 3D geospatial visualizations with rich and interactive dynamic data plots.
 
-## Available Scripts
+## Feature
 
-In the project directory, you can run:
+### Layers
+* Toggle common layers
 
-### `npm start`
+### Tools
+* Measure coordinate, distance, area
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### My maps
+* Draw customized map by users
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Themes
 
-### `npm test`
+#### City LOD2 model
+* Data source: A geojson polygons provided from [Taiwan gov opendata](https://data.gov.tw/dataset/84581)
+* Extrude polygons according to the number of floors buildings(Assume one floor has 3 meters)
+* Devide the models by a slider using the number of floors
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://user-images.githubusercontent.com/24452337/129505166-4946e664-6e0b-432c-9e81-62c00298b6b2.png" width="500">
 
-### `npm run build`
+#### School LOD3 model
+* A campus tour introduction
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Sun flower
+* Historical event record
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="https://user-images.githubusercontent.com/24452337/129505214-a1acd3a0-6b4d-4e2e-b33c-7ba043bb0096.png" width="500">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Built With
+* React - The web framework used
+* Redux - A predictable state container
+* Cesium - 3D Mapping framework
+* Material-UI - React UI framework
+* Resium - A library of React components for Cesium
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Next step
+* Complete Measure Tool
+* Complete My maps
+* Complete themes about the telecom stat with timeline
+* Add visualizing geospatial data tool
+* Add 2D Mapping framework
