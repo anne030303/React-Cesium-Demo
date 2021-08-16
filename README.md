@@ -1,4 +1,4 @@
-# Cesium Demo with React and Redux
+# Cesium Demo Application
 
 This app is built using React, Cesium and Resium. The goal of this app is to showcases 3D geospatial visualizations with rich and interactive dynamic data plots.
 
