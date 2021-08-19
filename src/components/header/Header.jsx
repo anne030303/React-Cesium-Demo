@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import 'react-pro-sidebar/dist/css/styles.css';
 import myStyle from "../Style";
 import clsx from 'clsx';
 import IconButton from '@material-ui/core/IconButton';
@@ -46,6 +45,16 @@ function Header() {
             isSidebarOpen: openSidebar
         });
     };
+    const handleSignin = () => {
+        dispatch({
+            type: 'ISSIGNIN',
+        });
+    };
+    const handleSignup = () => {
+        dispatch({
+            type: 'ISSIGNUP',
+        });
+    };
 
     return (
         <div id="header">
@@ -69,7 +78,8 @@ function Header() {
                     <Typography className={classes.title} variant="h6" noWrap>
                         My Map
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Button color="inherit" onClick={handleSignin}>Sign in</Button>
+                    <Button color="inherit" onClick={handleSignup}>Sign up</Button>
                 </Toolbar>
             </AppBar>
         </div>

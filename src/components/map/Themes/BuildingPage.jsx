@@ -26,9 +26,9 @@ function BuildingPage(props) {
             e.polygon.extrudedHeight = e.properties.建物樓層數 * 3;
             e.polygon.outline = false;
             if (e.properties.建物樓層數 < value) {
-                e.polygon.material = Color.RED;
+                e.polygon.material = Color.fromBytes(48, 135, 168);
             } else {
-                e.polygon.material = Color.GREEN;
+                e.polygon.material = Color.fromBytes(101, 59, 181);
             }
             // outlineColor
         })

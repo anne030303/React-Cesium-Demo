@@ -1,5 +1,4 @@
 import React from "react";
-import 'react-pro-sidebar/dist/css/styles.css';
 import "./Sidebar.css";
 import { Drawer } from '@material-ui/core';
 import SidebarItemList from './SidebarItemList';

@@ -51,3 +51,29 @@ export function toggleBuildingSliderChange(value) {
         value: value
     }
 }
+
+//帳號管理
+export function setCurrentUser(authUser) {
+    return {
+        type: 'AUTH',
+        authUser: authUser
+    }
+}
+
+export function isSignin() {
+    return {
+        type: 'ISSIGNIN',
+    }
+}
+
+export function isSignup() {
+    return {
+        type: 'ISSIGNUP',
+    }
+}
+
+export function closeSignup() {
+    return {
+        type: 'CLOSESIGN',
+    }
+}

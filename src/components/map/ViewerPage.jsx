@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Viewer } from "resium";
+import React, { useState, useEffect } from "react";
+import { Viewer, Camera } from "resium";
 import "./ViewerPage.css";
 import ViewerContext from "./ViewerContext";
 import { useSelector } from 'react-redux';
@@ -10,6 +10,12 @@ import Themes from './Themes/Themes'
 const ViewerPage = () => {
     let [viewer, setview] = useState(); // This will be raw Cesium's Viewer object.
     const mapControls = useSelector(state => state.mapControls);
+
+    // useEffect(() => {
+    //     if (viewer) {
+    //         console.log("viewer");
+    //     }
+    // });
 
     return (
         <ViewerContext.Provider value={{ viewer }}>
@@ -28,6 +34,7 @@ const ViewerPage = () => {
                 fullscreenButton={mapControls.fullscreenButton}
                 infoBox={mapControls.infoBox}
             >
+                <Camera />
                 <Layers />
                 <Themes />
             </Viewer>

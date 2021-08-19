@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { Cesium3DTileset } from "resium";
+import { Cesium3DTileset, CameraFlyTo } from "resium";
 import ViewerContext from "../ViewerContext";
-import { Cesium3DTileStyle } from 'cesium'
+import { Cartesian3, VerticalOrigin } from 'cesium'
 
 
 function Cesium3DTilesetTemplate(props) {
@@ -21,6 +21,7 @@ function Cesium3DTilesetTemplate(props) {
         // })
 
         if (viewer) {
+            console.log(viewer.camera);
             viewer.zoomTo(tileset);
         }
     };

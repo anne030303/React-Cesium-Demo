@@ -7,8 +7,8 @@ import isPopup from './isPopup'
 import isDrawingOrEditing from './isDrawingOrEditing'
 import checkedThemes from './checkedThemes'
 import valueOfBuildingThreshold from './valueOfBuildingThreshold'
-
-
+import currentUser from './currentUser'
+import isSign from './isSign'
 
 export default combineReducers({
     mapControls,
@@ -18,5 +18,7 @@ export default combineReducers({
     isPopup,
     isDrawingOrEditing,
     checkedThemes,
-    valueOfBuildingThreshold
+    valueOfBuildingThreshold,
+    currentUser,
+    isSign
 })

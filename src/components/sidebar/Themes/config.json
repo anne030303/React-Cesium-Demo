@@ -1,13 +1,6 @@
 {
     "ThemesItems": [
         {
-            "id": 1,
-            "name": "電信信令人口統計資料",
-            "componentname": "TelecomSignalingDemographicData",
-            "description": "",
-            "checked": false
-        },
-        {
             "id": 2,
             "name": "建物白模",
             "componentname": "Building",
@@ -26,7 +19,22 @@
             "name": "太陽花事件立法院模型",
             "componentname": "SunFlower",
             "description": "",
-            "checked": false
+            "checked": false,
+            "position": [
+                -3022834.149280862,
+                4928884.116377515,
+                2683543.6071680896
+            ],
+            "direction": [
+                -0.37258570695353926,
+                -0.40552451308698995,
+                -0.8347033965783841
+            ],
+            "up": [
+                -0.7528330825916403,
+                0.6580081105085626,
+                0.01636081478777218
+            ]
         }
     ],
     "SunFlower": [
@@ -130,6 +138,15 @@
             "url": "./geojson/台中市火車站周邊.geojson",
             "modelname": "台中市建物白模",
             "datatype": "geojsonBuilding"
+        }
+    ],
+    "bak": [
+        {
+            "id": 1,
+            "name": "電信信令人口統計資料",
+            "componentname": "TelecomSignalingDemographicData",
+            "description": "",
+            "checked": false
         }
     ]
 }
