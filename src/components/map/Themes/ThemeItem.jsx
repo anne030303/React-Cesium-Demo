@@ -3,6 +3,7 @@ import ThemeConfig from '../../sidebar/Themes/config.json';
 import Cesium3DTilesetTemplate from '../Templates/cesium3DTileset';
 import GeoJSONTemplate from '../Templates/geojson';
 import BuildingPage from './BuildingPage';
+import TelecomSignal from './TelecomSignal';
 
 function ThemeItem(props) {
     const themeLayers = ThemeConfig[props.item.componentname];
@@ -38,6 +39,12 @@ function ThemeItem(props) {
                         <BuildingPage
                             key={item.id}
                             id={item.id}
+                            item={item}
+                        />
+                    </div>
+                    <div value="geojson_Telecom">
+                        <TelecomSignal
+                            key={item.id}
                             item={item}
                         />
                     </div>

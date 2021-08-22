@@ -30,6 +30,7 @@ yarn-error.log*
 /src/setupTests.js
 /public/3Dtile
 /public/geojson
+/public/telecom
 /src/firebase.js
 
 .firebaserc

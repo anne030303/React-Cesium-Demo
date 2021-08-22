@@ -1,6 +1,13 @@
 {
     "ThemesItems": [
         {
+            "id": 1,
+            "name": "電信信令人口統計資料",
+            "componentname": "TelecomSignal",
+            "description": "",
+            "checked": false
+        },
+        {
             "id": 2,
             "name": "建物白模",
             "componentname": "Building",
@@ -140,13 +147,28 @@
             "datatype": "geojsonBuilding"
         }
     ],
-    "bak": [
+    "TelecomSignal": [
         {
             "id": 1,
-            "name": "電信信令人口統計資料",
-            "componentname": "TelecomSignalingDemographicData",
-            "description": "",
-            "checked": false
+            "url": "./telecom/country_simplify.geojson",
+            "modelname": "縣市界",
+            "type": "country",
+            "datatype": "geojson_Telecom",
+            "data": "./telecom/country_centroid_data.geojson",
+            "metedata": {
+                "weekday": {
+                    "上午": "10911_TelecomSignal_country_DAY_WORK(7:00~13:00)",
+                    "下午": "10911_TelecomSignal_country_DAY_WORK(13:00~19:00)",
+                    "夜間": "10911_TelecomSignal_country_NIGHT_WORK",
+                    "日間": "10911_TelecomSignal_country_DAY_WORK"
+                },
+                "weekend": {
+                    "上午": "10911_TelecomSignal_country_DAY_WEEKEND(7:00~13:00)",
+                    "下午": "10911_TelecomSignal_country_DAY_WEEKEND(13:00~19:00)",
+                    "夜間": "10911_TelecomSignal_country_NIGHT_WEEKEND",
+                    "日間": "10911_TelecomSignal_country_DAY_WEEKEND"
+                }
+            }
         }
     ]
 }

@@ -3,6 +3,7 @@ import { List, ListItem, ListItemText } from '@material-ui/core';
 import { useSelector, useDispatch } from 'react-redux';
 import Checkbox from '@material-ui/core/Checkbox';
 import BuildingSlidar from "./BuildingSlidar";
+import TelecomSlidar from './TelecomSlidar';
 
 
 
@@ -32,6 +33,7 @@ function ThemesComponents(props) {
 
                     </ListItem>
                     {(item.id === 2 && item.checked === true) && < BuildingSlidar />}
+                    {(item.id === 1 && item.checked === true) && < TelecomSlidar />}
                 </div>
             ))}
 

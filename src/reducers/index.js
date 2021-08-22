@@ -9,6 +9,7 @@ import checkedThemes from './checkedThemes'
 import valueOfBuildingThreshold from './valueOfBuildingThreshold'
 import currentUser from './currentUser'
 import isSign from './isSign'
+import valueOfTelecom from './valueOfTelecom'
 
 export default combineReducers({
     mapControls,
@@ -20,5 +21,6 @@ export default combineReducers({
     checkedThemes,
     valueOfBuildingThreshold,
     currentUser,
-    isSign
+    isSign,
+    valueOfTelecom
 })

@@ -77,3 +77,17 @@ export function closeSignup() {
         type: 'CLOSESIGN',
     }
 }
+// 電信人口
+export function adjustDay(day) {
+    return {
+        type: 'ADJUSTDAY',
+        day: day
+    }
+}
+
+export function adjustTime(time) {
+    return {
+        type: 'ADJUSTTIME',
+        time: time
+    }
+}
